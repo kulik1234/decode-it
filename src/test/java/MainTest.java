@@ -10,13 +10,11 @@ public class MainTest {
 
     @Test
     public void testMainFunction(){
-        List<int[]> data = new ArrayList<int[]>();
-        int[] temp = new int[3];
-        for (int i = 0; i < 100; i++) {
-            temp[0] = randInt(1,20);
-            temp[1] = randInt(1,30);
-            temp[2] = randInt(1,15);
-            data.add(temp);
+        int steps = 0;
+        for (int i =0; i <= 20000 ; i++) {
+             steps = Main.check(Integer.toString(i));
+            System.out.println("steps: "+steps+"; i: "+i);
+             assertTrue("true",steps > -2);
         }
 
 
