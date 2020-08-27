@@ -1,22 +1,19 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import static org.junit.Assert.*;
+import java.io.FileInputStream;
+import java.io.InputStream;
 
 public class MainTest {
 
-    @Test
-    public void testMainFunction(){
-        int steps = 0;
-        for (int i =0; i <= 20000 ; i++) {
-             steps = Main.check(Integer.toString(i));
-            System.out.println("steps: "+steps+"; i: "+i);
-             assertTrue("true",steps > -2);
-        }
 
+
+    @Test
+    public void testMainFunction() throws Exception {
+        String[] arr = new String[0];
+
+        InputStream f = new FileInputStream("C:\\Users\\Bogdan\\Desktop\\zad1\\decode\\src\\main\\resources\\test1");
+        System.setIn(f);
+        ZadP.main(arr);
 
     }
 
